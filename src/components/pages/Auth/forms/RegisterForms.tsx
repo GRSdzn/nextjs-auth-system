@@ -127,7 +127,7 @@ const RegisterForm = (props: Props) => {
               </div>
 
               <div className="mb-3 flex flex-wrap content-center">
-                <input id="remember" type="checkbox" className="mr-1 mb-2 checked:bg-main" />
+                <input id="remember" required type="checkbox" className="mr-1 mb-2 checked:bg-main" />
                 <label className="mr-auto text-xs font-semibold mb-2">Принять лицензионное соглашение</label>
                 <Link href="#" className="text-xs font-semibold text-main">
                   Забыли пароль?
