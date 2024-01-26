@@ -20,3 +20,11 @@
 - npm install (alias -  npm i) - для загрузки всех пакетов (package.json)
 - npm run dev (to launch a project in dev mode)
 - [Песня для разработки](https://www.youtube.com/watch?v=Ljqe4Nj7nBA&list=PLwnlgyFbyc1DOM5-aAhjtlWcBGXaTmJZj&index=8)
+
+
+## План работы
+- [X] ___Задача:___
+    - [ ] Определение со стеком технологий
+    - [ ] Развёртывание проекта
+    - [ ] Подключение к базе данных
+    - [ ] Создание функционала авторизации по JWT-токену
