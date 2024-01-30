@@ -7,7 +7,12 @@ export const links: ILinks[] = [
   },
   {
     id: 2,
-    title: 'Login & Register',
-    url: '/auth',
+    title: 'Sign-up',
+    url: '/auth/register/',
+  },
+  {
+    id: 3,
+    title: 'Log-in',
+    url: '/auth/login/',
   },
 ];

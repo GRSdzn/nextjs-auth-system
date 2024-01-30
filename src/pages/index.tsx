@@ -1,4 +1,4 @@
-import HomePage from '@/components/pages/Home';
+import { HomePageComponent } from '@/components/pages';
 import Head from 'next/head';
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
         <meta name="description" content="Главная страница сайта" />
       </Head>
       <main>
-        <HomePage />
+        <HomePageComponent />
       </main>
     </>
   );

@@ -34,21 +34,21 @@ const authApiSlice = apiSlice.injectEndpoints({
     }),
     login: builder.mutation({
       query: ({ email, password }) => ({
-        url: '/auth/create/',
+        url: '/create/',
         method: 'POST',
         body: { email, password },
       }),
     }),
     register: builder.mutation({
       query: ({ first_name, last_name, email, password, re_password }) => ({
-        url: '/auth/users/',
+        url: '/users/',
         method: 'POST',
         body: { first_name, last_name, email, password, re_password },
       }),
     }),
     verify: builder.mutation({
       query: () => ({
-        url: '/auth/verify/',
+        url: '/verify/',
         method: 'POST',
       }),
     }),

@@ -1,4 +1,4 @@
-import { Header } from '../ui/';
+import { Header } from '@/components/ui';
 import ReduxProvider from '../providers/ReduxProvider';
 import { Setup } from '../utills';
 
