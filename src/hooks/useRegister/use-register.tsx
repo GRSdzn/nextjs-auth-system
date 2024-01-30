@@ -1,7 +1,5 @@
 /* <!-- Register component --> */
-import { Spinner } from '@/components/ui';
 import { useRegisterMutation } from '@/redux/features/authApiSlice';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { ChangeEvent, FormEvent } from 'react';
 import { toast } from 'react-toastify';
