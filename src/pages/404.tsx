@@ -15,7 +15,7 @@ const Error = () => {
       <main>
         <div className="min-h-[94dvh] grid grid-cols-2 md:grid-cols-none px-40 md:px-4 grid-flow-row items-center">
           <div className="md:hidden">
-            <Image src={mouse} width={700} height={200} placeholder="blur" alt="404 error" className=" rounded-md" />
+            <Image priority src={mouse} width={700} height={200} placeholder="blur" alt="404 error" className=" rounded-md" />
           </div>
 
           <div className="w-full p-8">
