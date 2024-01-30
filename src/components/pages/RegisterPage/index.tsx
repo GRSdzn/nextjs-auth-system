@@ -17,7 +17,7 @@ export default function RegisterPageComponent() {
             Забыли пароль?
           </Link>
         </div>
-        <Image src={fox} className="h-full w-full object-center max-w-xl object-cover rounded-r-md" alt="fox" />
+        <Image priority placeholder="blur" src={fox} className="h-full w-full object-center max-w-xl object-cover rounded-r-md" alt="fox" />
       </div>
     </div>
   );

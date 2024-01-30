@@ -14,7 +14,7 @@ const Error = () => {
         <div className="w-full p-8">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-4">Ошибка</h1>
           <p className="text-lg md:text-xl text-gray-600 mb-8">Упс! Страница на которую вы перешли не была найдена :(</p>
-          <Link href="/">
+          <Link href="/" >
             <button className="px-6 py-3 bg-blue-500 text-white rounded-lg inline-block hover:bg-blue-600 transition duration-300 ease-in-out">Вернуться на главную</button>
           </Link>
         </div>
