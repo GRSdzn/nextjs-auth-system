@@ -27,11 +27,15 @@ export default function Form({ config, isLoading, onChange, onSubmit, btnText }:
           {input.labelText}
         </Input>
       ))}
-      <div className="flex items-center mt-2">
-        <input id="remember" required type="checkbox" className="mr-1 mb-2 rounded-sm border-gray-400 checked:bg-main" />
-        <label className="mr-auto text-xs font-semibold mb-2">Принять лицензионное соглашение</label>
-      </div>
-      <button className="block w-full text-center text-white bg-main hover:bg-mainLight duration-200 px-2 py-1.5 rounded-md">{isLoading ? <Spinner /> : `${btnText}`}</button>
+      {btnText === 'Зарегистрироваться' && (
+        <div className="flex items-center mt-2">
+          <input id="remember" required type="checkbox" className="mr-1 mb-2 rounded-sm border-gray-400 checked:bg-main" />
+          <label className="mr-auto text-xs font-semibold mb-2">Принять лицензионное соглашение</label>
+        </div>
+      )}
+      <button type="submit" disabled={isLoading} className="block w-full text-center text-white bg-main hover:bg-mainLight duration-200 px-2 py-1.5 rounded-md">
+        {isLoading ? <Spinner /> : `${btnText}`}
+      </button>
     </form>
   );
 }

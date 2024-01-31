@@ -20,7 +20,7 @@ interface CreateUserResponse {
 const authApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     retrieveUser: builder.query<User, void>({
-      query: () => '/users/me/',
+      query: () => '/auth/users/me/',
     }),
     socialAuthenticate: builder.mutation<CreateUserResponse, SocialAuthArgs>({
       query: ({ provider, state, code }) => ({
@@ -34,7 +34,7 @@ const authApiSlice = apiSlice.injectEndpoints({
     }),
     login: builder.mutation({
       query: ({ email, password }) => ({
-        url: '/create/',
+        url: '/auth/jwt/create/',
         method: 'POST',
         body: { email, password },
       }),
@@ -48,33 +48,33 @@ const authApiSlice = apiSlice.injectEndpoints({
     }),
     verify: builder.mutation({
       query: () => ({
-        url: '/verify/',
+        url: '/auth/jwt/verify/',
         method: 'POST',
       }),
     }),
     logout: builder.mutation({
       query: () => ({
-        url: '/logout/',
+        url: '/auth/logout/',
         method: 'POST',
       }),
     }),
     activation: builder.mutation({
       query: ({ uid, token }) => ({
-        url: '/users/activation/',
+        url: '/auth/users/activation/',
         method: 'POST',
         body: { uid, token },
       }),
     }),
     resetPassword: builder.mutation({
       query: (email) => ({
-        url: '/users/reset_password/',
+        url: '/auth/users/reset_password/',
         method: 'POST',
         body: { email },
       }),
     }),
     resetPasswordConfirm: builder.mutation({
       query: ({ uid, token, new_password, re_new_password }) => ({
-        url: '/users/reset_password_confirm/',
+        url: '/auth/users/reset_password_confirm/',
         method: 'POST',
         body: { uid, token, new_password, re_new_password },
       }),

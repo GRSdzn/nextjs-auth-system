@@ -6,15 +6,17 @@ interface Props {
   type: string;
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
   value: string;
-  placeholder?: string;
   required?: boolean;
+  placeholder?: string;
 }
 export default function Input({ children, labelId, type, placeholder, onChange, value, required = false }: Props) {
   return (
     <div className="mb-3">
-      <label htmlFor={labelId} className="mb-2 block text-xs font-semibold">
-        {children}
-      </label>
+      <div className="flex justify-between">
+        <label htmlFor={labelId} className="mb-2 block text-xs font-semibold">
+          {children}
+        </label>
+      </div>
       <input
         id={labelId}
         name={labelId}

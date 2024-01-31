@@ -9,7 +9,7 @@ const Error = () => {
     <>
       <Head>
         <title>Страница не найдена</title>
-        <meta http-equiv="refresh" content="3;url=http://www.localhost:3000/" />
+        {/* <meta http-equiv="refresh" content="3;url=http://www.localhost:3000/" /> */}
         <meta name="description" content="Данная страница не найдена. Код ошибки 404" />
       </Head>
       <main>

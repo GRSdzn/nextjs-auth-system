@@ -1,0 +1,7 @@
+User-agent: yandex
+disallow: /about                                указываем страницы, которые мы не хотим индексировать
+disallow: /admin/*
+
+User-agent: google
+disallow: /admin/*
+Sitemap: https://site.com/Sitemap.xml

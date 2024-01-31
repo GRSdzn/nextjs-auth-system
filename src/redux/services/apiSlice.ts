@@ -18,7 +18,7 @@ const baseQueryWithReauth: BaseQueryFn<string | FetchArgs, unknown, FetchBaseQue
       try {
         const refreshResult = await baseQuery(
           {
-            url: '/jwt/refresh/',
+            url: '/auth/jwt/refresh/',
             method: 'POST',
           },
           api,
@@ -43,9 +43,6 @@ const baseQueryWithReauth: BaseQueryFn<string | FetchArgs, unknown, FetchBaseQue
 };
 
 export const apiSlice = createApi({
-  // refetchOnFocus: true,
-  // tagTypes: ['ключ'], // 
-  refetchOnReconnect: true,
   reducerPath: 'api',
   baseQuery: baseQueryWithReauth,
   endpoints: (builder) => ({}),
