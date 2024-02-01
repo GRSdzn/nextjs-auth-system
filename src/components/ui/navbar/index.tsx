@@ -2,9 +2,8 @@ import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 import { useLogoutMutation } from '@/redux/features/authApiSlice';
 import { logout as setLogout } from '@/redux/features/authSlice';
 import { NavLink } from '@/components/utills';
-import { memo } from 'react';
 
-export const Header = memo(() => {
+export default function Header() {
   const dispatch = useAppDispatch();
 
   const [logout] = useLogoutMutation();
@@ -42,4 +41,4 @@ export const Header = memo(() => {
       {isAuthenticated ? authLinks : guestLinks}
     </header>
   );
-});
+}
