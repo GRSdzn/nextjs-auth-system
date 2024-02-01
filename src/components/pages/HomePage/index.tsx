@@ -1,15 +1,14 @@
 import { useFilmQuery } from '@/redux/features/ItemsApiSlice';
-import { toast } from 'react-toastify';
 
 export default function HomePage() {
   const { data: books, isFetching, isError } = useFilmQuery();
   // Error handling logic
   if (isError) {
-    return <div>Loading...</div>
+    return <div>Loading...</div>;
   }
 
   if (isFetching) {
-    return <div>Loading...</div>
+    return <div>Loading...</div>;
   }
 
   return (
