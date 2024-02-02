@@ -1,8 +1,8 @@
 'use client';
-import Link from 'next/link';
 import mouse from '@/assets/authImg/mouse_bg.jpg';
 import Image from 'next/image';
 import Head from 'next/head';
+import Link from 'next/link';
 
 const Error = () => {
   return (

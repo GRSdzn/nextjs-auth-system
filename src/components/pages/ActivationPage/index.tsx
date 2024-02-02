@@ -3,13 +3,6 @@ import { useActivationMutation } from '@/redux/features/authApiSlice';
 import { toast } from 'react-toastify';
 import { useParams, useRouter } from 'next/navigation';
 
-interface Props {
-  params: {
-    uid: string;
-    token: string;
-  };
-}
-
 const ActivationPageComponent = () => {
   const router = useRouter();
   const [activation] = useActivationMutation();

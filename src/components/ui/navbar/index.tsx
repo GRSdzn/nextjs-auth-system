@@ -1,20 +1,26 @@
+import fox from '@/assets/authImg/fox_bg.jpg';
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 import { useLogoutMutation } from '@/redux/features/authApiSlice';
 import { logout as setLogout } from '@/redux/features/authSlice';
 import { NavLink } from '@/components/utills';
+import { useRouter } from 'next/navigation';
+import { toast } from 'react-toastify';
 
 export default function Header() {
   const dispatch = useAppDispatch();
 
   const [logout] = useLogoutMutation();
-
-  // const { isAuthenticated } = useAppSelector((state) => state.auth);
-  const { isAuthenticated } = useAppSelector(({ auth }) => auth); // деструктуризация
+  const router = useRouter();
+  const { isAuthenticated } = useAppSelector((state) => state.auth);
+  // const { isAuthenticated } = useAppSelector(({ auth }) => auth); // деструктуризация
   const handleLogout = () => {
     logout(undefined)
       .unwrap()
       .then(() => {
         dispatch(setLogout());
+        // toast.info('Выход выполнен успешно');
+        toast.info('Выход выполнен успешно');
+        router.push('/auth/login');
       });
   };
 

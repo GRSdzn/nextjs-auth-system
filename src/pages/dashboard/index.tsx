@@ -1,18 +1,17 @@
-import { useRetrieveUserQuery } from '@/redux/features/authApiSlice';
+import DashBoardPageComponent from '@/components/pages/DashboardPage';
+import Head from 'next/head';
 
 const DashBoard = () => {
-  const { data, isFetching } = useRetrieveUserQuery();
-  // console.log(data);
   return (
-    <div>
-      <ul>
-        {isFetching && 'LOADING...'}
-        <li>email: {data?.email}</li>
-        <li>first name: {data?.first_name}</li>
-        <li>last name: {data?.last_name}</li>
-        <li>id: {data?.id}</li>
-      </ul>
-    </div>
+    <>
+      <Head>
+        <title>Профиль пользователя</title>
+        <meta name="description" content="Страница с личными данными пользователя" />
+      </Head>
+      <main>
+        <DashBoardPageComponent />
+      </main>
+    </>
   );
 };
 

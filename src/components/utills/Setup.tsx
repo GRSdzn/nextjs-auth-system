@@ -1,8 +1,12 @@
 import { useVerify } from '@/hooks';
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function Setup() {
   useVerify();
-  return <ToastContainer />;
+  const clearWaitingQueue = () => {
+    // Easy, right 😎
+    toast.clearWaitingQueue();
+  };
+  return <ToastContainer draggable limit={3} />;
 }
